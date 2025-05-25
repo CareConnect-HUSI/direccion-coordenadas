@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  coordenadas:
+    build: .
+    container_name: coordenadas-service
+    ports:
+      - "8010:8001"
+    networks:
+      - backend-net
+
+networks:
+  backend-net:
+    external: true
